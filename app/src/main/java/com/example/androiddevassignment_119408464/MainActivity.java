@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         // Get Data from XML, extract image list, chose random image index
         // Get image resource id and set Image resource
         players = new PlayersFromXML(this);
-        String[] images = players.getData("images");
+        String[] images = players.getData(PlayersFromXML.DataRetrievalType.IMAGES);
         System.out.println(images[0]);
         int imageId = this.getResources().getIdentifier(images[new Random().nextInt(players.getLength())],"drawable", this.getPackageName());
         imageView.setImageResource(imageId);

@@ -27,9 +27,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
         this.rowID = rowID;
         this.players = players;
 
-        this.names = players.getData("names");
-        this.positions = players.getData("positions");
-        this.images = players.getData("images");
+        this.names = players.getData(PlayersFromXML.DataRetrievalType.NAMES);
+        this.positions = players.getData(PlayersFromXML.DataRetrievalType.POSITIONS);
+        this.images = players.getData(PlayersFromXML.DataRetrievalType.IMAGES);
         this.recycleViewInterface = recycleViewInterface;
     }
 

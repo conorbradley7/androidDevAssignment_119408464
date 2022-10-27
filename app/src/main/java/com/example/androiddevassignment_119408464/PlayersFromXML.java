@@ -68,31 +68,39 @@ public class PlayersFromXML {
         return data;
     }
 
+    enum DataRetrievalType{
+        NAMES,
+        POSITIONS,
+        IMAGES,
+        NATIONALITIES
 
-    public String [] getData(String type){
+    };
+
+
+    public String [] getData(DataRetrievalType type){
         String data [] = new String[players.length];
         for(int i=0;i<getLength();i++){
         }
         switch(type){
-            case "names":
+            case NAMES:
                 for(int i=0;i<getLength();i++){
                     data[i] = getPlayer(i).getName();
                 }
                 break;
 
-            case "positions":
+            case POSITIONS:
                 for(int i=0;i<getLength();i++){
                     data[i] = getPlayer(i).getPosition();
                 }
                 break;
 
-            case "images":
+            case IMAGES:
                 for(int i=0;i<getLength();i++){
                     data[i] = getPlayer(i).getImage();
                 }
                 break;
 
-            case "nationalities":
+            case NATIONALITIES:
                 for(int i=0;i<getLength();i++){
                     data[i] = getPlayer(i).getNationality();
                 }
