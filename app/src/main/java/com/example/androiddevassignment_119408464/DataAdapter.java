@@ -1,6 +1,7 @@
 package com.example.androiddevassignment_119408464;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,18 +12,24 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
-
+    // Data Adapter Class
+    // USed for working with the recycle view list element
     private Context context;
     private int rowID;
+    private PlayersFromXML players;
     private String [] names;
     private String [] positions;
+    private String[] images;
     RecycleViewInterface recycleViewInterface;
 
-    public DataAdapter(Context context, int rowID, String[] names, String[] positions, RecycleViewInterface recycleViewInterface) {
+    public DataAdapter(Context context, int rowID, PlayersFromXML players, RecycleViewInterface recycleViewInterface) {
         this.context = context;
         this.rowID = rowID;
-        this.names = names;
-        this.positions = positions;
+        this.players = players;
+
+        this.names = players.getData("names");
+        this.positions = players.getData("positions");
+        this.images = players.getData("images");
         this.recycleViewInterface = recycleViewInterface;
     }
 
@@ -36,10 +43,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int pos) {
-        // populate / bind the viewholder fields with data
+        // populate or bind the viewholder fields with data
+        // takes in an integer pos marking the index of the list.
+        // populates that list item with appropriate name, image and position of player
+        int imageId = context.getResources().getIdentifier(images[pos],"drawable", context.getPackageName());
         holder.name.setText(names[pos]);
         holder.position.setText(positions[pos]);
-        holder.icon.setImageResource(R.drawable.logo1);
+        holder.icon.setImageResource(imageId);
     }
 
     @Override

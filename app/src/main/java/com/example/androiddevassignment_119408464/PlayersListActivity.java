@@ -2,6 +2,8 @@ package com.example.androiddevassignment_119408464;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,10 +13,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class PlayersListActivity extends AppCompatActivity implements RecycleViewInterface {
+    // "Activity 1"
+    // Recycle View List with players of Man United Squad
+    // List rows include image, name and position of players
 
     private RecyclerView recyclerView = null;
     private DataAdapter adapter = null;
     private PlayersFromXML players;
+    private Button homebtn = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +34,22 @@ public class PlayersListActivity extends AppCompatActivity implements RecycleVie
 
         // get the data
         players = new PlayersFromXML(this);
-        String[] names = players.getNames();
-        String[] positions = players.getPositions();
 
         // make the adapter and set it to recycleView
-        adapter = new DataAdapter(this, R.layout.row_layout, names, positions, this);
+        adapter = new DataAdapter(this, R.layout.row_layout, players, this);
+
         recyclerView.setAdapter(adapter);
+
+        homebtn = findViewById(R.id.homeBtn);
+
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlayersListActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -46,7 +62,10 @@ public class PlayersListActivity extends AppCompatActivity implements RecycleVie
 
         // make intent + place bundle on ot + start new activity
         // still few lines of functionality
-        Toast.makeText(this, players.getPlayer(pos).getName(),Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(PlayersListActivity.this, PlayerInfoActivity.class);
+        bundle.putSerializable("data", player);
+        intent.putExtras(bundle);
+        startActivity(intent);
 
     }
 }

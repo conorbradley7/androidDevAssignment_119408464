@@ -3,15 +3,17 @@ package com.example.androiddevassignment_119408464;
 import java.io.Serializable;
 
 public class Player implements Serializable {
+    // Player Class describing player objects
+    // Data to be taken from XML
 
-    private String name, nationality, position, shirt_num, url;
+    private String name, nationality, position, shirt_num, image;
 
-    public Player(String name, String nationality, String position, String shirt_num, String url) {
+    public Player(String name, String nationality, String position, String shirt_num, String image) {
         this.name = name;
         this.nationality = nationality;
         this.position = position;
         this.shirt_num = shirt_num;
-        this.url = url;
+        this.image = image;
     }
 
     public String getName() {
@@ -46,12 +48,12 @@ public class Player implements Serializable {
         this.shirt_num = shirt_num;
     }
 
-    public String getUrl() {
-        return url;
+    public String getImage() {
+        return image;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setImage(String url) {
+        this.image = url;
     }
 
 

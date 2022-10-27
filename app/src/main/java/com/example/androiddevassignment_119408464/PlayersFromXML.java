@@ -11,6 +11,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 public class PlayersFromXML {
+    // XML Parsing
+    // Extracts data from XML into lists of data for each tag
 
     private Context context;
     private Player [] players;
@@ -19,6 +21,7 @@ public class PlayersFromXML {
         this.context = context;
 
         // make the input stream
+        // point to XML file
         InputStream stream = context.getResources().openRawResource(R.raw.player_data);
         DocumentBuilder docBuilder = null;
         Document xmlDoc = null;
@@ -29,42 +32,72 @@ public class PlayersFromXML {
         }catch(Exception e){
         }
 
-        // slice xmlDoc
+        // slice xmlDoc, create lists of data by tagName
         NodeList nameList = xmlDoc.getElementsByTagName("name");
         NodeList nationalityList = xmlDoc.getElementsByTagName("nationality");
         NodeList positionList = xmlDoc.getElementsByTagName("position");
         NodeList shirtNumList = xmlDoc.getElementsByTagName("shirtNum");
-        NodeList urlList = xmlDoc.getElementsByTagName("bio");
+        NodeList imageList = xmlDoc.getElementsByTagName("image");
 
+        // Create a list of player objects
         players = new Player[nameList.getLength()];
 
-        // populate people
+        // populate player objects from created lists with XML data by iterating through
+        // and creating player object for each index.
         for(int i=0;i< players.length;i++){
             String name = nameList.item(i).getFirstChild().getNodeValue();
             String nationality = nationalityList.item(i).getFirstChild().getNodeValue();
             String position = positionList.item(i).getFirstChild().getNodeValue();
             String shirtNum = shirtNumList.item(i).getFirstChild().getNodeValue();
-            String url = urlList.item(i).getFirstChild().getNodeValue();
+            String image = imageList.item(i).getFirstChild().getNodeValue();
 
-            players[i] = new Player(name, nationality, position, shirtNum, url);
+            players[i] = new Player(name, nationality, position, shirtNum, image);
         }
 
     }
 
+    // Standard getters for extracting player data from Players list
     public int getLength(){return players.length;}
     public Player getPlayer(int i){return players[i];}
-    public String [] getNames(){
-        String names [] = new String[players.length];
+
+    public Player [] getPlayers(){
+        Player [] data = null;
         for(int i=0;i<getLength();i++){
-            names[i] = getPlayer(i).getName();
+            data[i] = getPlayer(i);
         }
-        return names;
+        return data;
     }
-    public String [] getPositions(){
-        String positions [] = new String[players.length];
+
+
+    public String [] getData(String type){
+        String data [] = new String[players.length];
         for(int i=0;i<getLength();i++){
-            positions[i] = getPlayer(i).getPosition();
         }
-        return positions;
+        switch(type){
+            case "names":
+                for(int i=0;i<getLength();i++){
+                    data[i] = getPlayer(i).getName();
+                }
+                break;
+
+            case "positions":
+                for(int i=0;i<getLength();i++){
+                    data[i] = getPlayer(i).getPosition();
+                }
+                break;
+
+            case "images":
+                for(int i=0;i<getLength();i++){
+                    data[i] = getPlayer(i).getImage();
+                }
+                break;
+
+            case "nationalities":
+                for(int i=0;i<getLength();i++){
+                    data[i] = getPlayer(i).getNationality();
+                }
+                break;
+        }
+        return data;
     }
 }

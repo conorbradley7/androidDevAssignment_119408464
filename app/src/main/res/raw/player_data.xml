@@ -5,181 +5,181 @@
         <nationality>Spain</nationality>
         <position>Goalkeeper</position>
         <shirtNum>1</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>degea</image>
     </player>
     <player>
         <name>Tom Heaton</name>
         <nationality>England</nationality>
         <position>Goalkeeper</position>
         <shirtNum>22</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>heaton</image>
     </player>
     <player>
         <name>Martin Dubravka</name>
         <nationality>Slovakia</nationality>
         <position>Goalkeeper</position>
         <shirtNum>31</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>dubravka</image>
     </player>
     <player>
         <name>Victor Lindelof</name>
         <nationality>Sweeden</nationality>
         <position>Defender</position>
         <shirtNum>2</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>lindelof</image>
     </player>
     <player>
         <name>Phil Jones</name>
         <nationality>England</nationality>
         <position>Defender</position>
         <shirtNum>4</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>jones</image>
     </player>
     <player>
         <name>Harry Maguire</name>
         <nationality>England</nationality>
         <position>Defender</position>
         <shirtNum>5</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>maguire</image>
     </player>
     <player>
         <name>Raphael Varane</name>
         <nationality>France</nationality>
         <position>Defender</position>
         <shirtNum>19</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>varane</image>
     </player>
     <player>
         <name>Diogo Dalot</name>
         <nationality>Portugal</nationality>
         <position>Defender</position>
         <shirtNum>20</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>dalot</image>
     </player>
     <player>
         <name>Luke Shaw</name>
         <nationality>England</nationality>
         <position>Defender</position>
         <shirtNum>23</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>shaw</image>
     </player>
     <player>
         <name>Aaron Wan Bissaka</name>
         <nationality>England</nationality>
         <position>Defender</position>
         <shirtNum>29</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>wanbissaka</image>
     </player>
     <player>
         <name>Tyrell Malacia</name>
         <nationality>Netherlands</nationality>
         <position>Defender</position>
         <shirtNum>12</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>malacia</image>
     </player>
     <player>
         <name>Lisandro Martinez</name>
         <nationality>Argentina</nationality>
         <position>Defender</position>
         <shirtNum>6</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>martinez</image>
     </player>
     <player>
         <name>Teden Mengi</name>
         <nationality>England</nationality>
         <position>Defender</position>
         <shirtNum>43</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>mengi</image>
     </player>
     <player>
         <name>Fred</name>
         <nationality>Brazil</nationality>
         <position>Midfielder</position>
         <shirtNum>17</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>fred</image>
     </player>
     <player>
         <name>Bruno Fernandes</name>
         <nationality>Portugal</nationality>
         <position>Midfielder</position>
         <shirtNum>8</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>bruno</image>
     </player>
     <player>
         <name>Scott McTominay</name>
         <nationality>Scotland</nationality>
         <position>Midfielder</position>
         <shirtNum>39</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>mctominay</image>
     </player>
     <player>
         <name>Alejandro Garnacho</name>
         <nationality>Argentina</nationality>
         <position>Midfielder</position>
         <shirtNum>49</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>garnacho</image>
     </player>
     <player>
         <name>Donny Van de Beek</name>
         <nationality>Netherlands</nationality>
         <position>Midfielder</position>
         <shirtNum>34</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>donny</image>
     </player>
     <player>
         <name>Christian Eriksen</name>
         <nationality>Denmark</nationality>
         <position>Midfielder</position>
         <shirtNum>14</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>eriksen</image>
     </player>
     <player>
         <name>Casemiro</name>
         <nationality>Brazil</nationality>
         <position>Midfielder</position>
         <shirtNum>18</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>casemiro</image>
     </player>
     <player>
         <name>Cristiano Ronaldo</name>
         <nationality>Portugal</nationality>
         <position>Forward</position>
         <shirtNum>7</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>ronaldo</image>
     </player>
     <player>
         <name>Marcus Rashford</name>
         <nationality>England</nationality>
         <position>Forward</position>
         <shirtNum>10</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>rash</image>
     </player>
     <player>
         <name>Antony</name>
         <nationality>Brazil</nationality>
         <position>Forward</position>
         <shirtNum>21</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>antony</image>
     </player>
     <player>
         <name>Jadon Sancho</name>
         <nationality>England</nationality>
         <position>Forward</position>
         <shirtNum>25</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>sancho</image>
     </player>
     <player>
         <name>Anthony Martial</name>
         <nationality>France</nationality>
         <position>Forward</position>
         <shirtNum>9</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>martial</image>
     </player>
     <player>
         <name>Anthony Elanga</name>
         <nationality>Sweeden</nationality>
         <position>Forward</position>
         <shirtNum>36</shirtNum>
-        <bio>http://www.cs.ucc.ie/~stabirca</bio>
+        <image>elanga</image>
     </player>
 </dataroot>
