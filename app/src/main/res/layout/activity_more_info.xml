@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlayerInfoActivity">
+    tools:context=".MoreInfoActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -43,18 +43,20 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/playerImg"
-        android:layout_width="230dp"
-        android:layout_height="243dp"
-        android:layout_weight="1"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="PlayerBioHere"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.106"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.13" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -64,8 +66,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerImg">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -74,11 +75,11 @@
             android:padding="4dp">
 
             <TextView
-                android:id="@+id/positionLabel"
+                android:id="@+id/appearancesLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                android:text="Position:" />
+                android:text="Appearances:" />
 
             <TextView
                 android:id="@+id/appearancesVal"
@@ -94,14 +95,14 @@
             android:padding="4dp">
 
             <TextView
-                android:id="@+id/shirtNumLabel"
+                android:id="@+id/goalsLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                android:text="Shirt Number:" />
+                android:text="Goals:" />
 
             <TextView
-                android:id="@+id/shirtNumVal"
+                android:id="@+id/goalsVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6" />
@@ -115,14 +116,14 @@
             android:padding="4dp">
 
             <TextView
-                android:id="@+id/nationalityLabel"
+                android:id="@+id/assistsLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                android:text="Nationality:" />
+                android:text="Assists:" />
 
             <TextView
-                android:id="@+id/nationalityVal"
+                android:id="@+id/assistsVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6" />
@@ -136,14 +137,14 @@
             android:padding="4dp">
 
             <TextView
-                android:id="@+id/AppearancesLabel"
+                android:id="@+id/trophiesLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                android:text="Appearances:" />
+                android:text="Major Trophies:" />
 
             <TextView
-                android:id="@+id/AppearancesVal"
+                android:id="@+id/trophiesVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6" />
@@ -153,6 +154,7 @@
     </TableLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -165,12 +167,6 @@
             android:layout_weight="1"
             android:text="Home" />
 
-        <Button
-            android:id="@+id/moreInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="More Info" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

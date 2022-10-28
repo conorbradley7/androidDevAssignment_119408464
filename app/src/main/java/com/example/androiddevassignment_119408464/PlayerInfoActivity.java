@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class PlayerInfoActivity extends AppCompatActivity {
 
     private Button homebtn = null;
+    private Button moreInfo = null;
     private Player data = null;
     private TextView name = null;
     private TextView position= null;
@@ -29,8 +30,9 @@ public class PlayerInfoActivity extends AppCompatActivity {
         data = (Player)intent.getExtras().getSerializable("data");
 
         homebtn = findViewById(R.id.homeBtn);
+        moreInfo = findViewById(R.id.moreInfo);
         name = findViewById(R.id.pageTitle);
-        position = findViewById(R.id.positionVal);
+        position = findViewById(R.id.appearancesVal);
         shirtNum = findViewById(R.id.shirtNumVal);
         nation = findViewById(R.id.nationalityVal);
         playerImg = findViewById(R.id.playerImg);
@@ -47,6 +49,18 @@ public class PlayerInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PlayerInfoActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        moreInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+
+                Intent intent = new Intent(PlayerInfoActivity.this, MoreInfoActivity.class);
+                bundle.putSerializable("data", data);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });

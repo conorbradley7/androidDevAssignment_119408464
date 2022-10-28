@@ -38,6 +38,11 @@ public class PlayersFromXML {
         NodeList positionList = xmlDoc.getElementsByTagName("position");
         NodeList shirtNumList = xmlDoc.getElementsByTagName("shirtNum");
         NodeList imageList = xmlDoc.getElementsByTagName("image");
+        NodeList appearancesList = xmlDoc.getElementsByTagName("appearances");
+        NodeList goalsList = xmlDoc.getElementsByTagName("goals");
+        NodeList assistsList = xmlDoc.getElementsByTagName("assists");
+        NodeList trophiesList = xmlDoc.getElementsByTagName("majorTrophies");
+        NodeList bioList = xmlDoc.getElementsByTagName("bio");
 
         // Create a list of player objects
         players = new Player[nameList.getLength()];
@@ -50,8 +55,13 @@ public class PlayersFromXML {
             String position = positionList.item(i).getFirstChild().getNodeValue();
             String shirtNum = shirtNumList.item(i).getFirstChild().getNodeValue();
             String image = imageList.item(i).getFirstChild().getNodeValue();
+            String appearances = appearancesList.item(i).getFirstChild().getNodeValue();
+            String goals = goalsList.item(i).getFirstChild().getNodeValue();
+            String assists = assistsList.item(i).getFirstChild().getNodeValue();
+            String trophies = trophiesList.item(i).getFirstChild().getNodeValue();
+            String bio = bioList.item(i).getFirstChild().getNodeValue();
 
-            players[i] = new Player(name, nationality, position, shirtNum, image);
+            players[i] = new Player(name, nationality, position, shirtNum, image, appearances, goals, assists, trophies, bio);
         }
 
     }
@@ -68,41 +78,76 @@ public class PlayersFromXML {
         return data;
     }
 
+
     enum DataRetrievalType{
         NAMES,
         POSITIONS,
         IMAGES,
-        NATIONALITIES
-
+        NATIONALITIES,
+        APPEARANCES,
+        GOALS,
+        ASSISTS,
+        MAJOR_TROPHIES,
+        BIO
     };
-
 
     public String [] getData(DataRetrievalType type){
         String data [] = new String[players.length];
         for(int i=0;i<getLength();i++){
         }
-        switch(type){
+        switch(type) {
             case NAMES:
-                for(int i=0;i<getLength();i++){
+                for (int i = 0; i < getLength(); i++) {
                     data[i] = getPlayer(i).getName();
                 }
                 break;
 
             case POSITIONS:
-                for(int i=0;i<getLength();i++){
+                for (int i = 0; i < getLength(); i++) {
                     data[i] = getPlayer(i).getPosition();
                 }
                 break;
 
             case IMAGES:
-                for(int i=0;i<getLength();i++){
+                for (int i = 0; i < getLength(); i++) {
                     data[i] = getPlayer(i).getImage();
                 }
                 break;
 
             case NATIONALITIES:
-                for(int i=0;i<getLength();i++){
+                for (int i = 0; i < getLength(); i++) {
                     data[i] = getPlayer(i).getNationality();
+                }
+                break;
+
+            case APPEARANCES:
+                for (int i = 0; i < getLength(); i++) {
+                    data[i] = getPlayer(i).getAppearances();
+                }
+                break;
+
+
+            case GOALS:
+                for(int i=0;i<getLength();i++){
+                    data[i] = getPlayer(i).getGoals();
+                }
+                break;
+
+            case ASSISTS:
+                for(int i=0;i<getLength();i++){
+                    data[i] = getPlayer(i).getAssists();
+                }
+                break;
+
+            case MAJOR_TROPHIES:
+                for(int i=0;i<getLength();i++){
+                    data[i] = getPlayer(i).getMajor_trophies();
+                }
+                break;
+
+            case BIO:
+                for(int i=0;i<getLength();i++){
+                    data[i] = getPlayer(i).getBio();
                 }
                 break;
         }
