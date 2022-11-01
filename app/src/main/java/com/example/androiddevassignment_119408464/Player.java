@@ -6,7 +6,7 @@ public class Player implements Serializable {
     // Player Class describing player objects
     // Data to be taken from XML
 
-    private String name, nationality, position, shirt_num, image, appearances, goals, assists, major_trophies, bio;
+    private String name, nationality, age, position, shirt_num, image, appearances, goals, assists, major_trophies, bio, quote;
 
     public String getAppearances() {
         return appearances;
@@ -48,9 +48,26 @@ public class Player implements Serializable {
         this.bio = bio;
     }
 
-    public Player(String name, String nationality, String position, String shirt_num, String image, String appearances, String goals, String assists, String major_trophies, String bio) {
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getQuote() {
+        return quote;
+    }
+
+    public void setQuote(String quote) {
+        this.quote = quote;
+    }
+
+    public Player(String name, String nationality, String age, String position, String shirt_num, String image, String appearances, String goals, String assists, String major_trophies, String bio, String quote) {
         this.name = name;
         this.nationality = nationality;
+        this.age = age;
         this.position = position;
         this.shirt_num = shirt_num;
         this.image = image;
@@ -59,6 +76,7 @@ public class Player implements Serializable {
         this.assists = assists;
         this.major_trophies = major_trophies;
         this.bio = bio;
+        this.quote = quote;
     }
 
     public String getName() {

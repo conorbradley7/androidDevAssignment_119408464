@@ -35,6 +35,7 @@ public class PlayersFromXML {
         // slice xmlDoc, create lists of data by tagName
         NodeList nameList = xmlDoc.getElementsByTagName("name");
         NodeList nationalityList = xmlDoc.getElementsByTagName("nationality");
+        NodeList ageList = xmlDoc.getElementsByTagName("age");
         NodeList positionList = xmlDoc.getElementsByTagName("position");
         NodeList shirtNumList = xmlDoc.getElementsByTagName("shirtNum");
         NodeList imageList = xmlDoc.getElementsByTagName("image");
@@ -43,6 +44,7 @@ public class PlayersFromXML {
         NodeList assistsList = xmlDoc.getElementsByTagName("assists");
         NodeList trophiesList = xmlDoc.getElementsByTagName("majorTrophies");
         NodeList bioList = xmlDoc.getElementsByTagName("bio");
+        NodeList quoteList = xmlDoc.getElementsByTagName("quote");
 
         // Create a list of player objects
         players = new Player[nameList.getLength()];
@@ -52,6 +54,7 @@ public class PlayersFromXML {
         for(int i=0;i< players.length;i++){
             String name = nameList.item(i).getFirstChild().getNodeValue();
             String nationality = nationalityList.item(i).getFirstChild().getNodeValue();
+            String age = ageList.item(i).getFirstChild().getNodeValue();
             String position = positionList.item(i).getFirstChild().getNodeValue();
             String shirtNum = shirtNumList.item(i).getFirstChild().getNodeValue();
             String image = imageList.item(i).getFirstChild().getNodeValue();
@@ -60,8 +63,9 @@ public class PlayersFromXML {
             String assists = assistsList.item(i).getFirstChild().getNodeValue();
             String trophies = trophiesList.item(i).getFirstChild().getNodeValue();
             String bio = bioList.item(i).getFirstChild().getNodeValue();
+            String quote = quoteList.item(i).getFirstChild().getNodeValue();
 
-            players[i] = new Player(name, nationality, position, shirtNum, image, appearances, goals, assists, trophies, bio);
+            players[i] = new Player(name, nationality, age, position, shirtNum, image, appearances, goals, assists, trophies, bio, quote);
         }
 
     }
@@ -82,13 +86,15 @@ public class PlayersFromXML {
     enum DataRetrievalType{
         NAMES,
         POSITIONS,
+        AGE,
         IMAGES,
         NATIONALITIES,
         APPEARANCES,
         GOALS,
         ASSISTS,
         MAJOR_TROPHIES,
-        BIO
+        BIO,
+        QUOTE
     };
 
     public String [] getData(DataRetrievalType type){
@@ -105,6 +111,12 @@ public class PlayersFromXML {
             case POSITIONS:
                 for (int i = 0; i < getLength(); i++) {
                     data[i] = getPlayer(i).getPosition();
+                }
+                break;
+
+            case AGE:
+                for (int i = 0; i < getLength(); i++) {
+                    data[i] = getPlayer(i).getAge();
                 }
                 break;
 
@@ -148,6 +160,12 @@ public class PlayersFromXML {
             case BIO:
                 for(int i=0;i<getLength();i++){
                     data[i] = getPlayer(i).getBio();
+                }
+                break;
+
+            case QUOTE:
+                for (int i = 0; i < getLength(); i++) {
+                    data[i] = getPlayer(i).getQuote();
                 }
                 break;
         }

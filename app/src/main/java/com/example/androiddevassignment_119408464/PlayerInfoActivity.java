@@ -15,6 +15,7 @@ public class PlayerInfoActivity extends AppCompatActivity {
     private Button moreInfo = null;
     private Player data = null;
     private TextView name = null;
+    private TextView age= null;
     private TextView position= null;
     private TextView shirtNum= null;
     private TextView nation= null;
@@ -32,12 +33,14 @@ public class PlayerInfoActivity extends AppCompatActivity {
         homebtn = findViewById(R.id.homeBtn);
         moreInfo = findViewById(R.id.moreInfo);
         name = findViewById(R.id.pageTitle);
-        position = findViewById(R.id.appearancesVal);
+        age = findViewById(R.id.ageVal);
+        position = findViewById(R.id.positionVal);
         shirtNum = findViewById(R.id.shirtNumVal);
         nation = findViewById(R.id.nationalityVal);
         playerImg = findViewById(R.id.playerImg);
 
         name.setText(data.getName());
+        age.setText(data.getAge());
         position.setText(data.getPosition());
         shirtNum.setText(data.getShirt_num());
         nation.setText(data.getNationality());

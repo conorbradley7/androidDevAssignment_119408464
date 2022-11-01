@@ -74,6 +74,27 @@
             android:padding="4dp">
 
             <TextView
+                android:id="@+id/ageLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="Age:" />
+
+            <TextView
+                android:id="@+id/ageVal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:padding="4dp">
+
+            <TextView
                 android:id="@+id/positionLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -81,7 +102,7 @@
                 android:text="Position:" />
 
             <TextView
-                android:id="@+id/appearancesVal"
+                android:id="@+id/positionVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6" />
@@ -123,27 +144,6 @@
 
             <TextView
                 android:id="@+id/nationalityVal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            android:padding="4dp">
-
-            <TextView
-                android:id="@+id/AppearancesLabel"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Appearances:" />
-
-            <TextView
-                android:id="@+id/AppearancesVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6" />

@@ -19,6 +19,7 @@ public class MoreInfoActivity extends AppCompatActivity {
     private TextView goals = null;
     private TextView assists = null;
     private TextView trophies = null;
+    private TextView quote = null;
 
 
     @Override
@@ -37,6 +38,7 @@ public class MoreInfoActivity extends AppCompatActivity {
         goals = findViewById(R.id.goalsVal);
         assists = findViewById(R.id.assistsVal);
         trophies = findViewById(R.id.trophiesVal);
+        quote = findViewById(R.id.quote);
 
 
         name.setText(data.getName());
@@ -45,6 +47,7 @@ public class MoreInfoActivity extends AppCompatActivity {
         goals.setText(data.getGoals());
         assists.setText(data.getAssists());
         trophies.setText(data.getMajor_trophies());
+        quote.setText(data.getQuote());
 
 
 
