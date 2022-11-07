@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AC241A"
-    android:orientation="vertical">
+    android:background="#F44336"
+    tools:context=".WebViewActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -14,7 +14,7 @@
         android:background="@android:color/holo_red_dark"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@id/playerList"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -33,39 +33,74 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
-            android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif-black"
             android:gravity="center_vertical"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
             android:paddingRight="20dp"
             android:paddingBottom="20dp"
-            android:text="Manchester United Players"
             android:textColor="#FFFFFF"
             android:textSize="22sp" />
+
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/playerList"
-        android:layout_width="match_parent"
-        android:layout_height="604dp"
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="410dp"
+        android:layout_height="642dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.472" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/homeBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="0.5"
+            android:autoSizeTextType="uniform"
             android:backgroundTint="#E6BB3A"
-            android:text="Back" />
+            android:maxLines="1"
+            android:text="Home" />
+
+        <Button
+            android:id="@+id/playerInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:text="Player Info" />
+
+        <Button
+            android:id="@+id/moreInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:text="More Info" />
+
+        <Button
+            android:id="@+id/listBut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:text="Player List" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

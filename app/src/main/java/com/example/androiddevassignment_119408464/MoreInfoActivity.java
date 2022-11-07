@@ -12,7 +12,12 @@ import android.widget.TextView;
 public class MoreInfoActivity extends AppCompatActivity {
 
     private Button homebtn = null;
+    private Button playerInfoBtn = null;
+    private Button webInfoBtn = null;
+    private Button listBtn = null;
+
     private Player data = null;
+
     private TextView name = null;
     private TextView bio = null;
     private TextView appearances = null;
@@ -32,6 +37,9 @@ public class MoreInfoActivity extends AppCompatActivity {
         data = (Player)intent.getExtras().getSerializable("data");
 
         homebtn = findViewById(R.id.homeBtn);
+        playerInfoBtn = findViewById(R.id.playerInfo);
+        webInfoBtn = findViewById(R.id.webViewBut);
+        listBtn = findViewById(R.id.listBut);
         name = findViewById(R.id.pageTitle);
         bio = findViewById(R.id.bio);
         appearances = findViewById(R.id.appearancesVal);
@@ -55,6 +63,38 @@ public class MoreInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MoreInfoActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        listBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MoreInfoActivity.this, PlayersListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        playerInfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+
+                Intent intent = new Intent(MoreInfoActivity.this, PlayerInfoActivity.class);
+                bundle.putSerializable("data", data);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        webInfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+
+                Intent intent = new Intent(MoreInfoActivity.this, WebViewActivity.class);
+                bundle.putSerializable("data", data);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });

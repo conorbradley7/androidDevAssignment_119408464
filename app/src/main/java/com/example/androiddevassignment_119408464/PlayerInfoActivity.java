@@ -13,13 +13,19 @@ public class PlayerInfoActivity extends AppCompatActivity {
 
     private Button homebtn = null;
     private Button moreInfo = null;
+    private Button webInfo;
+    private Button listBtn;
+
     private Player data = null;
+
     private TextView name = null;
     private TextView age= null;
     private TextView position= null;
     private TextView shirtNum= null;
     private TextView nation= null;
+
     private ImageView playerImg = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +37,15 @@ public class PlayerInfoActivity extends AppCompatActivity {
         data = (Player)intent.getExtras().getSerializable("data");
 
         homebtn = findViewById(R.id.homeBtn);
-        moreInfo = findViewById(R.id.moreInfo);
+        moreInfo = findViewById(R.id.playerInfo);
         name = findViewById(R.id.pageTitle);
         age = findViewById(R.id.ageVal);
         position = findViewById(R.id.positionVal);
         shirtNum = findViewById(R.id.shirtNumVal);
         nation = findViewById(R.id.nationalityVal);
         playerImg = findViewById(R.id.playerImg);
+        webInfo = findViewById(R.id.webViewBut);
+        listBtn = findViewById(R.id.listBut);
 
         name.setText(data.getName());
         age.setText(data.getAge());
@@ -56,6 +64,14 @@ public class PlayerInfoActivity extends AppCompatActivity {
             }
         });
 
+        listBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlayerInfoActivity.this, PlayersListActivity.class);
+                startActivity(intent);
+            }
+        });
+
         moreInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,5 +83,18 @@ public class PlayerInfoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        webInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+
+                Intent intent = new Intent(PlayerInfoActivity.this, WebViewActivity.class);
+                bundle.putSerializable("data", data);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
     }
 }

@@ -45,6 +45,8 @@ public class PlayersFromXML {
         NodeList trophiesList = xmlDoc.getElementsByTagName("majorTrophies");
         NodeList bioList = xmlDoc.getElementsByTagName("bio");
         NodeList quoteList = xmlDoc.getElementsByTagName("quote");
+        NodeList urlList = xmlDoc.getElementsByTagName("url");
+
 
         // Create a list of player objects
         players = new Player[nameList.getLength()];
@@ -64,8 +66,10 @@ public class PlayersFromXML {
             String trophies = trophiesList.item(i).getFirstChild().getNodeValue();
             String bio = bioList.item(i).getFirstChild().getNodeValue();
             String quote = quoteList.item(i).getFirstChild().getNodeValue();
+            String url = urlList.item(i).getFirstChild().getNodeValue();
 
-            players[i] = new Player(name, nationality, age, position, shirtNum, image, appearances, goals, assists, trophies, bio, quote);
+
+            players[i] = new Player(name, nationality, age, position, shirtNum, image, appearances, goals, assists, trophies, bio, quote, url);
         }
 
     }
@@ -73,15 +77,6 @@ public class PlayersFromXML {
     // Standard getters for extracting player data from Players list
     public int getLength(){return players.length;}
     public Player getPlayer(int i){return players[i];}
-
-    public Player [] getPlayers(){
-        Player [] data = null;
-        for(int i=0;i<getLength();i++){
-            data[i] = getPlayer(i);
-        }
-        return data;
-    }
-
 
     enum DataRetrievalType{
         NAMES,
@@ -99,8 +94,6 @@ public class PlayersFromXML {
 
     public String [] getData(DataRetrievalType type){
         String data [] = new String[players.length];
-        for(int i=0;i<getLength();i++){
-        }
         switch(type) {
             case NAMES:
                 for (int i = 0; i < getLength(); i++) {

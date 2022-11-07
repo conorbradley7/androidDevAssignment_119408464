@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AC241A"
     tools:context=".PlayerInfoActivity">
 
     <LinearLayout
@@ -71,20 +72,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:padding="4dp">
+            android:background="#050505"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/ageLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Age:" />
+                android:layout_weight="0.9"
+                android:text="Age:"
+                android:textColor="#F1EEEE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/ageVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
+                android:layout_weight="0.6"
+                android:textColor="#F1EEEE"
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -92,40 +99,52 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:padding="4dp">
+            android:background="#050505"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/positionLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Position:" />
+                android:layout_weight="0.9"
+                android:text="Position:"
+                android:textColor="#F1EEEE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/positionVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
+                android:layout_weight="0.6"
+                android:textColor="#F1EEEE"
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:padding="4dp">
+            android:background="#050505"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/shirtNumLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Shirt Number:" />
+                android:layout_weight="0.9"
+                android:text="Shirt Number:"
+                android:textColor="#F1EEEE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/shirtNumVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
+                android:layout_weight="0.6"
+                android:textColor="#F1EEEE"
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -133,20 +152,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:padding="4dp">
+            android:background="#050505"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/nationalityLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Nationality:" />
+                android:layout_weight="0.9"
+                android:text="Nationality:"
+                android:textColor="#F1EEEE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/nationalityVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
+                android:layout_weight="0.6"
+                android:textColor="#F1EEEE"
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -155,22 +180,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/homeBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="0.9"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:maxLines="1"
             android:text="Home" />
 
         <Button
-            android:id="@+id/moreInfo"
+            android:id="@+id/playerInfo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
             android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
             android:text="More Info" />
+
+        <Button
+            android:id="@+id/webViewBut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:text="Web Info" />
+
+        <Button
+            android:id="@+id/listBut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:text="Player List"
+            android:backgroundTint="#E6BB3A" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

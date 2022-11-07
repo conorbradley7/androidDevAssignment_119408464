@@ -4,10 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2732426961263021" />
-        <entry key="app/src/main/res/layout/activity_more_info.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/activity_player_info.xml" value="0.267108154296875" />
-        <entry key="app/src/main/res/layout/activity_players_list.xml" value="0.20479761706568345" />
-        <entry key="app/src/main/res/layout/row_layout.xml" value="0.2908330281575521" />
+        <entry key="app/src/main/res/layout/activity_more_info.xml" value="0.2473190307617188" />
+        <entry key="app/src/main/res/layout/activity_player_info.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_players_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_web_view.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/row_layout.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/menu/more_info_menu.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/menu/player_list_menu.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/menu/player_view_menu.xml" value="0.165" />
+        <entry key="app/src/main/res/menu/web_voew_menu.xml" value="0.30885416666666665" />
       </map>
     </option>
   </component>
@@ -16,5 +22,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.16864471435546874" />
+      </ProjectState>
+    </option>
   </component>
 </project>

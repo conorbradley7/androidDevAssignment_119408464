@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AC241A"
     tools:context=".MoreInfoActivity">
 
     <LinearLayout
@@ -48,21 +49,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:padding="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="20dp"
         android:text="PlayerBioHere"
+        android:textColor="#FAF7F7"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/quote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="20dp"
         android:text="PlayerQuoteHere"
+        android:textColor="#FAF7F7"
+        android:textSize="16sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,40 +90,54 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:padding="4dp">
+            android:background="#050505"
+            android:backgroundTint="#050505"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/appearancesLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Appearances:" />
+                android:layout_weight="0.9"
+                android:text="Appearances:"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/appearancesVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
+                android:layout_weight="0.6"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:padding="4dp">
+            android:background="#050505"
+            android:backgroundTint="#050505"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/goalsLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Goals:" />
+                android:layout_weight="0.9"
+                android:text="Goals:"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/goalsVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
+                android:layout_weight="0.6"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -123,20 +145,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:padding="4dp">
+            android:background="#050505"
+            android:backgroundTint="#050505"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/assistsLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Assists:" />
+                android:layout_weight="0.9"
+                android:text="Assists:"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/assistsVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
+                android:layout_weight="0.6"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -144,39 +173,79 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:padding="4dp">
+            android:background="#050505"
+            android:backgroundTint="#050505"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/trophiesLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
-                android:text="Major Trophies:" />
+                android:layout_weight="0.9"
+                android:text="Major Trophies:"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/trophiesVal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.6" />
+                android:layout_weight="0.6"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp" />
 
         </TableRow>
 
     </TableLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/homeBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="0.6"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:maxLines="1"
             android:text="Home" />
 
+        <Button
+            android:id="@+id/playerInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:text="Player Info" />
+
+        <Button
+            android:id="@+id/webViewBut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:text="Web Info" />
+
+        <Button
+            android:id="@+id/listBut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="#E6BB3A"
+            android:text="Player List" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
